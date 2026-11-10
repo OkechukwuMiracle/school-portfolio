@@ -40,11 +40,4 @@ media/          welcome.wav audio clip
 | Arrays & functions | `tasks` array with `filter`, `find`, `map`, `forEach`; `projectDetails` array; validator functions |
 | Task management | Add, mark complete, delete, filter, search, clear completed, progress bar, saved in localStorage |
 
-## Personalise before submitting
-Use Find & Replace across all files:
-- `Alex Morgan` → your name, and `AM` → your initials (logo badge + `images/favicon.svg`)
-- `Your University`, `CSC/2026/001`, `alex.morgan@student.edu`, phone number, location
-- Replace `images/profile.svg` with your real photo (e.g. `images/profile.jpg`) and update the `src` in `index.html`
-- Edit the courses, grades, skills, hobbies and projects to match your own
-
 Note: The Google Font and the sample video on the About page load from the internet. Offline, the site falls back to a system font and the video poster image.
