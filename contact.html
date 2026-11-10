@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Miracle Okechukwu.">
+  <title>Contact | Miracle Okechukwu – Student Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/profile.jpeg" type="image/jpeg">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-bar container" aria-label="Main navigation">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Miracle Okechukwu</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark mode">🌙</button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Contact Me</h1>
+        <p>Questions, collaboration ideas or opportunities? I'd love to hear from you.</p>
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Contact details and form">
+      <div class="container contact-layout">
+
+        <!-- ===== Contact information ===== -->
+        <aside class="card">
+          <h2 style="font-size:1.4rem;margin-bottom:0.5rem">Get In Touch</h2>
+          <p style="color:var(--text-muted)">Fill in the form or reach me directly through any of these channels.</p>
+
+          <ul class="contact-info">
+            <li>
+              <div class="card-icon">📧</div>
+              <div><small>Email</small><a href="mailto:m.okechukwu@miva.edu.ng">m.okechukwu@miva.edu.ng</a></div>
+            </li>
+            <li>
+              <div class="card-icon">📞</div>
+              <div><small>Phone</small><a href="tel:+2347052719791">+234 705 271 9791</a></div>
+            </li>
+            <li>
+              <div class="card-icon">📍</div>
+              <div><small>Location</small><address style="font-style:normal">Faculty of Computing, Miva Open University</address></div>
+            </li>
+            <li>
+              <div class="card-icon">🕒</div>
+              <div><small>Availability</small>Mon – Fri, 9:00am – 5:00pm</div>
+            </li>
+          </ul>
+
+          <ul class="social-links" aria-label="Social media">
+            <li><a href="https://github.com/OkechukwuMiracle" target="_blank" rel="noopener" aria-label="GitHub">GH</a></li>
+            <li><a href="https://www.linkedin.com/in/miracle-okechukwu-49178a316" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></li>
+            <li><a href="https://x.com/miracledamian15" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a></li>
+          </ul>
+        </aside>
+
+        <!-- ===== Contact form ===== -->
+        <div class="card">
+          <h2 style="font-size:1.4rem;margin-bottom:1.25rem">Send a Message</h2>
+
+          <div class="form-alert" id="formAlert" role="alert"></div>
+
+          <form id="contactForm" novalidate>
+            <fieldset style="border:none">
+              <legend class="visually-hidden">Contact form</legend>
+
+              <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="e.g. Jane Doe" autocomplete="name">
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+                  <span class="error-msg" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="required">*</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="08012345678" inputmode="numeric" autocomplete="tel">
+                  <span class="error-msg" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span class="required">*</span> <span class="char-count" id="charCount">0 / 500</span></label>
+                <textarea id="message" name="message" maxlength="500" placeholder="Write your message here..."></textarea>
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+
+              <div class="hero-buttons">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="reset" class="btn btn-outline">Clear Form</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section-alt" aria-labelledby="faq-title">
+      <div class="container" style="max-width:800px">
+        <div class="section-title reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faq-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Are you available for internships?</summary>
+            <p>Yes! I'm looking for front-end or web development internships during the long vacation.</p>
+          </details>
+          <details>
+            <summary>Can you help build a website for my club or business?</summary>
+            <p>Absolutely. I enjoy volunteer and freelance projects — send me a message with the details.</p>
+          </details>
+          <details>
+            <summary>How quickly do you reply?</summary>
+            <p>I usually reply within 24–48 hours on weekdays.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Miracle Okechukwu</h4>
+          <p>Software Engineering student passionate about web technologies, clean design and solving real-world problems with code.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/OkechukwuMiracle" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/miracle-okechukwu-49178a316" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:m.okechukwu@miva.edu.ng">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; <span id="year">2026</span> Miracle Okechukwu · COS 106 Term Project · Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

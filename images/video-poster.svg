@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d348f"/>
+      <stop offset="1" stop-color="#4c6ef5"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#sky)"/>
+  <path d="M0 290 Q160 240 320 280 T640 270 V360 H0 Z" fill="#1f9d55" opacity="0.85"/>
+  <g transform="translate(320 220)">
+    <rect x="-3" y="0" width="6" height="80" fill="#2e7d32"/>
+    <g fill="#f5a623">
+      <ellipse cx="0" cy="-26" rx="14" ry="26"/>
+      <ellipse cx="0" cy="26" rx="14" ry="26" transform="rotate(0)"/>
+      <ellipse cx="-26" cy="0" rx="26" ry="14"/>
+      <ellipse cx="26" cy="0" rx="26" ry="14"/>
+    </g>
+    <circle r="14" fill="#d48806"/>
+  </g>
+  <circle cx="320" cy="140" r="42" fill="#ffffff" opacity="0.9"/>
+  <path d="M308 118 L340 140 L308 162 Z" fill="#2b4acb"/>
+  <text x="320" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#ffffff">Nature Photography Clip</text>
+</svg>

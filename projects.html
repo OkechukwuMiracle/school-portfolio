@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sample web development projects by Miracle Okechukwu.">
+  <title>Projects | Miracle Okechukwu – Student Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/profile.jpeg" type="image/jpeg">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-bar container" aria-label="Main navigation">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Miracle Okechukwu</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark mode">🌙</button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <h1>My Projects</h1>
+        <p>A selection of things I've designed and built while learning web technologies.</p>
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Projects</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Portfolio</span>
+          <h2 id="projects-title">Featured Work</h2>
+          <p id="projectCount" aria-live="polite">Showing 4 of 4 projects</p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" type="button" data-category="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-category="web" aria-pressed="false">Websites</button>
+          <button class="filter-btn" type="button" data-category="app" aria-pressed="false">Web Apps</button>
+          <button class="filter-btn" type="button" data-category="react" aria-pressed="false">React Apps</button>
+        </div>
+
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <article class="project-card" data-category="web">
+            <figure class="project-thumb">
+              <img src="images/project-portfolio.svg" alt="Screenshot of the student portfolio website homepage" width="640" height="400" loading="lazy">
+              <span class="project-category">Website</span>
+            </figure>
+            <div class="project-body">
+              <h3>Student Portfolio Website</h3>
+              <p>
+                This very website! A responsive, multi-page portfolio that presents my profile,
+                skills and projects, with a light/dark theme and smooth animations.
+              </p>
+              <ul class="tech-list" aria-label="Technologies used">
+                <li>HTML5</li><li>CSS Grid</li><li>Flexbox</li><li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="index.html" class="btn btn-primary btn-sm">Live Site</a>
+                <button type="button" class="btn btn-outline btn-sm" data-details="portfolio">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-category="app">
+            <figure class="project-thumb">
+              <img src="images/project-planner.svg" alt="Screenshot of the academic task planner showing a task list" width="640" height="400" loading="lazy">
+              <span class="project-category">Web App</span>
+            </figure>
+            <div class="project-body">
+              <h3>Academic Task Planner</h3>
+              <p>
+                An interactive to-do application for managing assignments and study goals.
+                Users can add, complete, filter and delete tasks, and track their progress.
+              </p>
+              <ul class="tech-list" aria-label="Technologies used">
+                <li>JavaScript</li><li>DOM</li><li>localStorage</li><li>CSS</li>
+              </ul>
+              <div class="project-links">
+                <a href="planner.html" class="btn btn-primary btn-sm">Try It</a>
+                <button type="button" class="btn btn-outline btn-sm" data-details="planner">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-category="app">
+            <figure class="project-thumb">
+              <img src="images/project-weather.svg" alt="Screenshot of the campus weather dashboard with forecast cards" width="640" height="400" loading="lazy">
+              <span class="project-category">Web App</span>
+            </figure>
+            <div class="project-body">
+              <h3>Campus Weather Dashboard</h3>
+              <p>
+                A clean dashboard that shows the current weather and 5-day forecast for any city,
+                built to practise working with APIs and JSON data.
+              </p>
+              <ul class="tech-list" aria-label="Technologies used">
+                <li>HTML</li><li>CSS Grid</li><li>Fetch API</li><li>JSON</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://weather-app-eight-beta-22.vercel.app/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Live Demo</a>
+                <button type="button" class="btn btn-outline btn-sm" data-details="weather">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-category="react">
+            <figure class="project-thumb">
+              <img src="images/project-ticket.svg" alt="Screenshot of the conference ticket generator showing a booked event ticket" width="640" height="400" loading="lazy">
+              <span class="project-category">React App</span>
+            </figure>
+            <div class="project-body">
+              <h3>Conference Ticket Generator</h3>
+              <p>
+                A multi-step booking app for the Techember Fest conference. Attendees pick a
+                ticket type, upload a profile photo and enter their details, then get a
+                personalised ticket they can download.
+              </p>
+              <ul class="tech-list" aria-label="Technologies used">
+                <li>React</li><li>React Router</li><li>Cloudinary</li><li>localStorage</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://ticket-generator-lyart.vercel.app/attendeeDetails" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Live App</a>
+                <button type="button" class="btn btn-outline btn-sm" data-details="ticket">Details</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta">
+          <h2>Have a project idea?</h2>
+          <p>I'm happy to collaborate on class projects, hackathons or volunteer websites.</p>
+          <a href="contact.html" class="btn btn-accent">Let's Talk</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project details modal -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="icon-btn modal-close" id="modalClose" type="button" aria-label="Close details">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Miracle Okechukwu</h4>
+          <p>Software Engineering student passionate about web technologies, clean design and solving real-world problems with code.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/OkechukwuMiracle" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/miracle-okechukwu-49178a316" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:m.okechukwu@miva.edu.ng">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; <span id="year">2026</span> Miracle Okechukwu · COS 106 Term Project · Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

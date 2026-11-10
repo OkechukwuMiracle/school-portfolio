@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive academic planner for managing tasks and assignments.">
+  <title>Academic Planner | Miracle Okechukwu– Student Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/profile.jpeg" type="image/jpeg">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-bar container" aria-label="Main navigation">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Miracle Okechukwu</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark mode">🌙</button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Academic Planner</h1>
+        <p>Stay on top of assignments, tests and study goals. Your tasks are saved in this browser.</p>
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Planner</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Task manager">
+      <div class="container planner-layout">
+
+        <!-- ===== Add task form + summary ===== -->
+        <aside>
+          <div class="card" style="margin-bottom:1.5rem">
+            <h2 style="font-size:1.3rem;margin-bottom:1.25rem">➕ Add a New Task</h2>
+            <form id="taskForm" novalidate>
+              <div class="form-group">
+                <label for="taskTitle">Task <span class="required">*</span></label>
+                <input type="text" id="taskTitle" name="taskTitle" placeholder="e.g. Submit COS 106 assignment" maxlength="100" autocomplete="off">
+                <span class="error-msg" id="taskError" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="taskCourse">Course</label>
+                <select id="taskCourse" name="taskCourse">
+                  <option value="General">General</option>
+                  <option value="COS 101">COS 101</option>
+                  <option value="COS 106" selected>COS 106</option>
+                  <option value="MTH 101">MTH 101</option>
+                  <option value="PHY 101">PHY 101</option>
+                  <option value="GST 111">GST 111</option>
+                  <option value="STA 111">STA 111</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="taskDate">Due Date</label>
+                  <input type="date" id="taskDate" name="taskDate">
+                </div>
+                <div class="form-group">
+                  <label for="taskPriority">Priority</label>
+                  <select id="taskPriority" name="taskPriority">
+                    <option value="high">High</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="low">Low</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%">Add Task</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <h2 style="font-size:1.3rem;margin-bottom:1rem">📊 Progress</h2>
+            <div class="planner-summary">
+              <div class="summary-box"><strong id="totalCount">0</strong><span>Total</span></div>
+              <div class="summary-box"><strong id="pendingCount">0</strong><span>Pending</span></div>
+              <div class="summary-box"><strong id="doneCount">0</strong><span>Done</span></div>
+            </div>
+            <div class="progress" role="presentation"><div class="progress-fill" id="progressFill"></div></div>
+            <p class="progress-label" id="progressLabel" aria-live="polite">0% of tasks completed</p>
+          </div>
+        </aside>
+
+        <!-- ===== Task list ===== -->
+        <div>
+          <div class="task-toolbar">
+            <div class="filter-bar" role="group" aria-label="Filter tasks">
+              <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-btn" type="button" data-filter="active" aria-pressed="false">Pending</button>
+              <button class="filter-btn" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+            </div>
+            <input type="search" id="taskSearch" class="task-search" placeholder="🔍 Search tasks..." aria-label="Search tasks">
+          </div>
+
+          <ul class="task-list" id="taskList" aria-live="polite"></ul>
+
+          <div class="planner-footer">
+            <button type="button" class="btn btn-outline btn-sm" id="clearCompleted">Clear Completed</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Weekly timetable (table) ===== -->
+    <section class="section section-alt" aria-labelledby="timetable-title">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Schedule</span>
+          <h2 id="timetable-title">Weekly Lecture Timetable</h2>
+          <p>My regular class schedule for this semester.</p>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table>
+            <caption>🗓️ First Semester Timetable</caption>
+            <thead>
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Monday</th>
+                <th scope="col">Tuesday</th>
+                <th scope="col">Wednesday</th>
+                <th scope="col">Thursday</th>
+                <th scope="col">Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">8:00 – 10:00</th><td>COS 101</td><td>MTH 101</td><td>COS 106</td><td>PHY 101</td><td>STA 111</td></tr>
+              <tr><th scope="row">10:00 – 12:00</th><td>GST 111</td><td>COS 106 (Lab)</td><td>MTH 101</td><td>COS 101</td><td>Free</td></tr>
+              <tr><th scope="row">12:00 – 1:00</th><td colspan="5" style="text-align:center;font-weight:600">Lunch Break</td></tr>
+              <tr><th scope="row">1:00 – 3:00</th><td>PHY 101 (Lab)</td><td>STA 111</td><td>Free</td><td>GST 111</td><td>Tech Club</td></tr>
+              <tr><th scope="row">3:00 – 5:00</th><td>Library</td><td>Study Group</td><td>Football</td><td>Library</td><td>Free</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Miracle Okechukwu</h4>
+          <p>Software Engineering student passionate about web technologies, clean design and solving real-world problems with code.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/OkechukwuMiracle" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/miracle-okechukwu" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:m.okechukwu@miva.edu.ng">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; <span id="year">2026</span> Miracle Okechukwu · COS 106 Term Project · Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal academic portfolio of Miracle Okechukwu, Software Engineering student.">
+  <title>Home | Miracle Okechukwu – Student Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/profile.jpeg" type="image/jpeg">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== Header & Navigation ===== -->
+  <header class="site-header">
+    <nav class="nav-bar container" aria-label="Main navigation">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Miracle Okechukwu</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark mode">🌙</button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero: name, photo, welcome message ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="eyebrow">Welcome to my portfolio</span>
+          <h1 id="hero-title">Hi, I'm <span class="highlight">Miracle Okechukwu</span></h1>
+          <p class="typed-line">I'm a <span class="typed-text"></span></p>
+          <p class="lead">
+            Welcome to my corner of the web! This is where I share my academic journey,
+            the projects I've built, and the skills I'm developing as a Software Engineering student.
+            Feel free to explore, and don't hesitate to say hello.
+          </p>
+          <div class="hero-buttons">
+            <a href="projects.html" class="btn btn-primary">View My Projects →</a>
+            <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <figure class="photo-frame">
+            <img src="images/profile.jpeg" alt="Portrait photograph of Miracle Okechukwu" width="360" height="360">
+            <figcaption class="photo-badge"><span class="status-dot"></span> Open to internships</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Brief Biography ===== -->
+    <section class="section section-alt" aria-labelledby="bio-title">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Who I am</span>
+          <h2 id="bio-title">A Brief Biography</h2>
+        </div>
+
+        <div class="bio">
+          <article class="bio-text reveal">
+            <p>
+              I am a first-year <strong>Software Engineering</strong> student at <strong>Miva Open University</strong>
+              with a strong interest in building websites and applications that solve real problems.
+              My journey into tech started in secondary school when I built my first web page with
+              nothing but Notepad and curiosity.
+            </p>
+            <p>
+              Since then, I've been learning HTML, CSS, JavaScript and Python, and I enjoy
+              turning ideas into clean, user-friendly interfaces. Outside the classroom I take part
+              in coding challenges, help classmates debug their code, and contribute to my
+              department's tech club.
+            </p>
+            <p>
+              My goal is to become a full-stack developer who builds accessible technology
+              for education and small businesses.
+            </p>
+            <p style="margin-top:1.5rem">
+              <a href="about.html" class="btn btn-accent btn-sm">Read more about me</a>
+            </p>
+          </article>
+
+          <aside class="card reveal" aria-label="Quick facts">
+            <h3>Quick Facts</h3>
+            <ul class="quick-facts">
+              <li><span>Programme</span><span>B.Sc. Software Engineering</span></li>
+              <li><span>Level</span><span>100 Level</span></li>
+              <li><span>Matric No.</span><span>2025/C/SENG/0971</span></li>
+              <li><span>Location</span><span>Lagos, Nigeria</span></li>
+              <li><span>Languages</span><span>English, French</span></li>
+              <li><span>Email</span><span><a href="mailto:m.okechukwu@miva.edu.ng">m.okechukwu@miva.edu.ng</a></span></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Stats ===== -->
+    <section class="section" aria-label="Academic highlights in numbers">
+      <div class="container">
+        <div class="stats reveal">
+          <div class="stat"><strong data-count="4.67">0</strong> Current CGPA</div>
+          <div class="stat"><strong data-count="4" data-suffix="+">0</strong> Projects Built</div>
+          <div class="stat"><strong data-count="6">0</strong> Tech Skills</div>
+          <div class="stat"><strong data-count="3">0</strong> Certificates</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== What you'll find here ===== -->
+    <section class="section section-alt" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Explore</span>
+          <h2 id="explore-title">What You'll Find Here</h2>
+          <p>Use the links below or the navigation menu to move around the site.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card reveal">
+            <div class="card-icon">👤</div>
+            <h3>About Me</h3>
+            <p>My education, career goals, technical skills and hobbies.</p>
+            <p><a href="about.html">Learn more →</a></p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">💻</div>
+            <h3>Projects</h3>
+            <p>Websites and apps I have designed and developed.</p>
+            <p><a href="projects.html">See projects →</a></p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">🗓️</div>
+            <h3>Academic Planner</h3>
+            <p>An interactive tool to manage my assignments and study tasks.</p>
+            <p><a href="planner.html">Open planner →</a></p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon">✉️</div>
+            <h3>Contact</h3>
+            <p>Send me a message about projects, study groups or opportunities.</p>
+            <p><a href="contact.html">Contact me →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Audio (multimedia) ===== -->
+    <section class="section" aria-labelledby="audio-title">
+      <div class="container">
+        <div class="card reveal">
+          <h2 id="audio-title" style="margin-bottom:1rem">🎧 Study Break Jingle</h2>
+          <div class="media-box">
+            <div class="card-icon">🎵</div>
+            <audio controls preload="metadata">
+              <source src="media/welcome.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <p style="margin-top:1rem;color:var(--text-muted)">
+            A short melody I composed with code, generated using a simple Python script that creates sound waves.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Call to action ===== -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Let's build something great together</h2>
+          <p>I'm always open to collaborating on projects, study groups and internship opportunities.</p>
+          <a href="contact.html" class="btn btn-accent">Say Hello 👋</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Miracle Okechukwu</h4>
+          <p>Software Engineering student passionate about web technologies, clean design and solving real-world problems with code.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:alex.morgan@student.edu">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; <span id="year">2026</span> Miracle Okechukwu · COS 106 Term Project · Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
